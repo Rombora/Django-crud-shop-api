@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+	<h2>Products</h2>
+	<table class="table">
+		<tr>
+			<td>Name</td>
+		    <td>Description</td>
+		    <td>Price ($)</td>
+		    <td>Category</td>
+		</tr>
+		{% for object in object_list %}
+			<tr>
+			    <td><a href="{{object.get_absolute_url}}">{{object}}</a></td>
+			    <td>{{ object.description }}</td>
+			    <td>${{ object.price }}</td>
+			    <td>{{ object.category }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+	<br>
+	<a class="btn btn-primary" href="{% url 'product_manager_product_create' %}">Create new Product</a>
+	<!-- <p><a class="btn btn-default" href="{% url 'index' %}">Back</a></p> -->
+{% endblock %}

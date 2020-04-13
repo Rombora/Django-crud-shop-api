@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+	<table class="table">
+		<tr>
+			<td>Name</td>
+			<td>{{ object.name }}</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>{{ object.description }}</td>
+		</tr>
+		<tr>
+			<td>Price ($)</td>
+			<td>${{ object.price }}</td>
+		</tr>
+		<tr>
+			<td>Category</td>
+			<td>{{ object.category }}</td>
+		</tr>
+	</table>
+	<p>
+		<a class="btn btn-primary" href="{{object.get_update_url}}">Edit Product</a>
+	</p>
+	<p>
+		<a class="btn btn-primary" href="{{object.get_delete_url}}">Delete Product</a>
+	</p>
+	<p>
+		<a class="btn btn-default" href="{% url 'product_manager_product_list' %}">Back</a>
+	</p>
+
+{% endblock %}

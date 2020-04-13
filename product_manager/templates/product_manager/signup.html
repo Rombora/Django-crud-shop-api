@@ -1,0 +1,89 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<html>
+	<head>
+		<!-- <link href="{% static 'style.css' %}" rel="stylesheet"> -->
+		<link href="{% static 'materialize.min.css' %}" rel="stylesheet">
+
+		<script src="{% static 'materialize.min.js' %}"></script>
+		<script src="{% static 'jquery.min.js' %}"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			.light-blue.lighten-1{
+				background-color: #fff !important;
+				color: teal !important;
+			}
+
+			.brand-logo{
+				color: teal !important;
+				text-transform: uppercase;
+				transition: .2s;
+				font-weight: bold !important;
+
+			}
+
+			.brand-logo:hover{
+				color: #039be5 !important;
+			}
+
+			.right.hide-on-med-and-down a{
+				color: #6a737d !important;
+				text-transform: uppercase;
+				/*transition: 1s !important;*/
+			}
+
+			.right.hide-on-med-and-down a:hover{
+				color: teal !important;
+				/*color: red !important;*/
+				/*#039be5*/
+				/*transition: 1s;*/
+			}
+
+			.the-username{
+				color: teal !important;
+				float: right;
+				margin-right: 100px;
+			}
+
+			html{
+				font-family: monospace;
+			}
+		</style>
+		<nav class="light-blue lighten-1" role="navigation">
+			<div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Shop</a>
+				<ul class="right hide-on-med-and-down">
+					<li>
+						<a href="/">Products</a>
+					</li>
+					<li>
+						<a href="/category/">Categories</a>
+					</li>
+					<li>
+						<a href="/accounts/login/">Login</a>
+					</li>
+				</ul>
+		    </div>
+		    <a class="the-username">{{ request.user.username }}</a>
+	    </nav>
+	    <div class="container">
+	    	<div class="section">
+
+				<script>
+					 $(document).ready(function() {
+					   $('select').attr("class", "browser-default")
+					});
+				</script>
+				<h4>Signup</h4>
+				<form method="post">
+					{% csrf_token %}
+					{{form|crispy}}
+					<p><button class="btn btn-primary" type="submit">Submit</button><p>
+				</form>
+				<p><a class="btn btn-default" href="{% url 'product_manager_product_list' %}">Cancel</a></p>
+
+	    	</div>
+    	</div>
+	</body>
+</html>
