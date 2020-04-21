@@ -61,7 +61,7 @@ Use the following credentials:
 
   password: admin
 
-One can also register a user from the signup page. Although the registered user will lack superuser priviledges.
+One can also register a user from the signup page. Although the registered user will lack superuser privileges.
 
 
 You can create a custom supeuser from the command-line by running
