@@ -34,7 +34,10 @@ This project is written in Python 3, and works on any platform
 
 Run the following in a virtual environment
 
-`python -m venv venv`
+```
+python -m venv env
+source env/bin/activate
+```
 ```
 pip install -r requirements.txt
 python manage.py makemigrations
