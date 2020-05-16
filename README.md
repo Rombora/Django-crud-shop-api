@@ -1,5 +1,6 @@
-# crud-shop-api
-A simple django api implementing CRUD
+# CRUD
+## Django Shop API
+This is a simple django API implementing the four basic functions of persistent storage, Create, Read, Update and Delete (CRUD).
 
 Product model:
 - name
