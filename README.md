@@ -34,24 +34,24 @@ This project is written in Python 3, and works on any platform .
 
 Run the following in to create a virtual environment.
 
-```
-python -m venv env
-source env/bin/activate
+```bash
+$ python -m venv env
+$ source env/bin/activate
 ```
 Install the required modules for the project.
 
-```
-pip install -r requirements.txt
+```bash
+$ pip install -r requirements.txt
 ```
 To propagate changes in model, run:
 ```
-python manage.py makemigrations
-python manage.py migrate
+$ python manage.py makemigrations
+$ python manage.py migrate
 ```
 
 Start the server using
 ```
-python manage.py runserver
+$ python manage.py runserver
 ```
 
 
@@ -73,6 +73,6 @@ Use the following credentials:
 A user can be registered from the signup page. This user will lack superuser privileges, for security purposes.
 
 A custom supeuser can be created from the command-line by running
-```
-python manage.py createsuperuser
+```bash
+$ python manage.py createsuperuser
 ```
