@@ -27,21 +27,30 @@ Views:
 
 ## Getting started
 
-This project is written in Python 3, and works on any platform 
+This project is written in Python 3, and works on any platform .
 
 
 - Clone the repository using Git
 
-Run the following in a virtual environment
+Run the following in to create a virtual environment.
 
 ```
 python -m venv env
 source env/bin/activate
 ```
+Install the required modules for the project.
+
 ```
 pip install -r requirements.txt
+```
+To propagate changes in model, run:
+```
 python manage.py makemigrations
 python manage.py migrate
+```
+
+Start the server using
+```
 python manage.py runserver
 ```
 
@@ -54,17 +63,16 @@ The application can now be accessed through http://127.0.0.1:8000 in the browser
 
 
 The user is prompted to login.
-The application has an existing superuser account which can be used to login.
+The application has an existing superuser account which can be used during login.
 Use the following credentials:
 
   username: admin
 
   password: admin
 
-One can also register a user from the signup page. Although the registered user will lack superuser privileges.
+A user can be registered from the signup page. This user will lack superuser privileges, for security purposes.
 
-
-You can create a custom supeuser from the command-line by running
+A custom supeuser can be created from the command-line by running
 ```
 python manage.py createsuperuser
 ```
