@@ -3,26 +3,26 @@
 This is a simple django API implementing the four basic functions of persistent storage, Create, Read, Update and Delete (CRUD).
 
 Product model:
-- name
-- description
-- price
-- category
+* name
+* description
+* price
+* category
 
 Category model:
-- name
+* name
 
 Views:
-- list of all products
-- details of each product
-- add new product
-- edit existing product
-- delete existing product
+* list of all products
+* details of each product
+* add new product
+* edit existing product
+* delete existing product
 
-- list of all categories
-- details of each category
-- add new category
-- edit existing category
-- delete existing category
+* list of all categories
+* details of each category
+* add new category
+* edit existing category
+* delete existing category
 
 
 
