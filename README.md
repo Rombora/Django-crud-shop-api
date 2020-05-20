@@ -67,9 +67,9 @@ The user is prompted to login.
 The application has an existing superuser account which can be used during login.
 Use the following credentials:
 
-  **username: admin**
+    username: admin
 
-  **password: admin**
+    password: admin
 
 A user can be registered from the signup page. This user will lack superuser privileges, for security purposes.
 
